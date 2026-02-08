@@ -161,6 +161,26 @@ h1, h2, h3 {
   flex: 1 1 min(280px, 100%);
 }
 
+.content-card .propose-song {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rose-light);
+}
+
+.content-card .propose-song .song-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--rose-deep);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content-card .propose-song audio {
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+}
+
 /* Landing grid */
 .landing-grid {
   display: grid;

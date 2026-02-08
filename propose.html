@@ -24,9 +24,47 @@
         <img src="p1.png" alt="Propose Day photo 1" />
         <img src="p2.png" alt="Propose Day photo 2" />
         <img src="p3.png" alt="Propose Day photo 3" />
+        <img src="p4.png" alt="Propose Day photo 4" />
+        <img src="p5.png" alt="Propose Day photo 5" />
+      </div>
+      <div class="propose-song">
+        <p class="song-label">This ones dedicated for you</p>
+        <audio id="propose-song" controls muted autoplay preload="auto">
+          <source src="song.mp3" type="audio/mpeg" />
+          <source src="song.ogg" type="audio/ogg" />
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
   </main>
   <footer class="site-footer">7 Special Days of Valentine</footer>
+  <script>
+    // Auto-play the song when page loads
+    window.addEventListener('DOMContentLoaded', function() {
+      const audio = document.getElementById('propose-song');
+      
+      // Start with muted autoplay (browsers allow this)
+      audio.muted = true;
+      audio.play().then(() => {
+        // Unmute after a short delay
+        setTimeout(() => {
+          audio.muted = false;
+        }, 100);
+      }).catch(() => {
+        // If autoplay still fails, try on first user interaction
+        const playOnInteraction = function() {
+          audio.muted = false;
+          audio.play().catch(() => {});
+          document.removeEventListener('click', playOnInteraction);
+          document.removeEventListener('touchstart', playOnInteraction);
+          document.removeEventListener('keydown', playOnInteraction);
+        };
+        
+        document.addEventListener('click', playOnInteraction);
+        document.addEventListener('touchstart', playOnInteraction);
+        document.addEventListener('keydown', playOnInteraction);
+      });
+    });
+  </script>
 </body>
 </html>
