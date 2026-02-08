@@ -1,0 +1,200 @@
+/* 7 Days of Valentine - Shared Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600&display=swap');
+
+:root {
+  --rose-deep: #8b2942;
+  --rose-mid: #c45c7a;
+  --rose-light: #f5e6eb;
+  --gold: #c9a962;
+  --cream: #fdf8f5;
+  --ink: #2d1f24;
+  --shadow: rgba(139, 41, 66, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+/* Layout */
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Header / Nav */
+.site-header {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  background: linear-gradient(180deg, var(--rose-light) 0%, transparent 100%);
+}
+
+.site-header h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--rose-deep);
+  letter-spacing: 0.02em;
+}
+
+.site-header p {
+  margin-top: 0.5rem;
+  color: var(--rose-mid);
+  font-size: 0.95rem;
+}
+
+.nav-days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.nav-days a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: var(--rose-deep);
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--rose-light);
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-days a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+  border-color: var(--rose-mid);
+}
+
+/* Day page header */
+.day-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.day-header .back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--rose-mid);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.day-header .back:hover {
+  color: var(--rose-deep);
+}
+
+.day-header h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: var(--rose-deep);
+}
+
+.day-header .date {
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.day-header .tagline {
+  margin-top: 0.75rem;
+  color: var(--ink);
+  font-size: 1rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content card */
+.content-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  border: 1px solid var(--rose-light);
+}
+
+.content-card .rose-image {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.content-card .rose-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+/* Landing grid */
+.landing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.landing-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--rose-light);
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.landing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: var(--rose-mid);
+}
+
+.landing-card .emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.landing-card .day-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: var(--rose-deep);
+  font-weight: 600;
+}
+
+.landing-card .day-date {
+  font-size: 0.8rem;
+  color: var(--rose-mid);
+  margin-top: 0.25rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--rose-mid);
+  font-size: 0.85rem;
+}
