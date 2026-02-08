@@ -153,12 +153,20 @@ h1, h2, h3 {
   margin-top: 1.5rem;
 }
 
-.content-card .propose-photos img {
+.content-card .propose-photos img,
+.content-card .chocolate-photos img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 16px var(--shadow);
   flex: 1 1 min(280px, 100%);
+}
+
+.content-card .chocolate-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .content-card .propose-song {
